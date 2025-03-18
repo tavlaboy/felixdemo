@@ -197,9 +197,37 @@
                            cursor: pointer; font-size: 16px; transition: 0.3s;">
                     PROCESS
                 </button>
+                
+
             </form>
             
-      
+            {% if download_link %}
+            <br>
+            <a href="{{ download_link }}" download>
+                <button style="padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 5px; 
+                              cursor: pointer; font-size: 16px; transition: 0.3s;">
+                    Download Processed File
+                </button>
+            </a>
+
+            <a href="/reset">
+              <button 
+                style="
+                  padding: 10px 20px; 
+                  background: #dc3545; 
+                  color: white; 
+                  border: none; 
+                  border-radius: 5px; 
+                  cursor: pointer; 
+                  font-size: 16px; 
+                  transition: 0.3s;"
+              >
+                RESET
+              </button>
+            </a>
+            
+
+        {% endif %}
               {% if table %}
                   <div>{{ table|safe }}</div>
               {% endif %}
@@ -209,14 +237,6 @@
       </body>
       </div>
     </div>
-  </section>
-
-  <!-- end service section -->
-
-
-  <!-- about section -->
-
-  <section class="about_section layout_padding">
     <div class="container  ">
       
       {% if second_table %}
@@ -225,6 +245,15 @@
       <div class="center-table">{{ second_table|safe }}</div>
       {% endif %}
     </div>
+  </section>
+
+  <!-- end service section -->
+
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+
   </section>
 
   <!-- end about section -->
