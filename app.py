@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, send_file, url_for
 import pandas as pd
-<<<<<<< HEAD
+
 import os
 
 from functions import removeAddress, sum_by_mapping  # Import your processing functions
