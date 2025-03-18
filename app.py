@@ -9,7 +9,6 @@ from functions import removeAddress, sum_by_mapping  # Import your processing fu
 from functions import removeAddress, sum_by_mapping  # Import your new function
 import os
 # Configure Flask to use the current directory for both templates and static files.
->>>>>>> a93f2f88ed82237aac57fd91691b29e30356854d
 app = Flask(__name__, template_folder=".", static_folder=".", static_url_path="")
 
 # Define a dedicated folder for uploaded and processed files
