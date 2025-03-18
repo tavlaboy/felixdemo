@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect
 import pandas as pd
 from functions import removeAddress, sum_by_mapping  # Import your new function
-
+import os
 # Configure Flask to use the current directory for both templates and static files.
 app = Flask(__name__, template_folder=".", static_folder=".", static_url_path="")
 
@@ -34,4 +34,5 @@ def index():
     return render_template('index.html', table=table_html, second_table=second_table_html)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5501)
+    port = int(os.environ.get("PORT", 10000))  # Default to 10000 if PORT is not set
+    app.run(debug=True, host="0.0.0.0", port=port)
